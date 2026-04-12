@@ -13,21 +13,10 @@ Yechen Fan, Xianyou Ji, Chenyang Song, Huixin He, Haibin Wu, Jinhua Ye <sup>†<
 
 # 📖 Overview
 <p align="center">
-  <img src="docs/fig1.jpg" alt="Overview of BimanualShift" width="95%">
+  <img src="docs/framework.jpg" alt="Technical Framework of BimanualShift" width="95%">
 </p>
+
 **BimanualShift** is a modular transfer framework for general bimanual manipulation. Instead of learning dual-arm control from scratch, it reuses **fully frozen pretrained unimanual policies** and equips them with lightweight adaptation modules for perception, coordination, and memory.
-
-<p align="center">
-  <img src="docs/fig2.jpg" alt="Technical Framework of BimanualShift" width="95%">
-</p>
-
-**BimanualShift** contains three key modules:  
-(1) a **Visual Tracker** for arm-specific perceptual decoupling,  
-(2) an **Action Generator** for instruction-conditioned skill recomposition and residual correction, and  
-(3) a **Skill Memory Bank** for experience retrieval and continual refinement.  
-
-Together, these modules enable data-efficient, robust, and generalizable bimanual manipulation by combining frozen unimanual priors with explicit visual isolation, dynamic coordination, and memory-based adaptation.
-
 
 # 💻 Installation
 
