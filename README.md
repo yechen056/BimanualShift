@@ -9,6 +9,8 @@
 
 Yechen Fan, Xianyou Ji, Chenyang Song, Huixin He, Haibin Wu, Jinhua Ye <sup>†</sup>, Gengfeng Zheng <sup>†</sup>
 
+**[[Project Page](https://yechen056.github.io/Bift/)] | [[Paper]()]**
+
 </div>
 
 # 📖 Overview
