@@ -1,0 +1,83 @@
+ddp:
+    master_addr: "localhost"
+    master_port: "0"
+    num_devices: 1
+
+rlbench:
+    task_name: "tasks"
+    tasks: [coordinated_push_box]
+    demos: 100
+    demo_path: /home/yechen/BimanualShift/data/rlbench_data/train
+    episode_length: 25
+    cameras: [ "over_shoulder_right", "wrist_right", "front", "overhead","over_shoulder_left" , "wrist_left"]
+    camera_resolution: [256,256]
+    scene_bounds: [-0.3, -0.5, 0.6, 0.7, 0.5, 1.6]
+    include_lang_goal_in_obs: True
+    instructions: /path
+
+replay:
+    batch_size: 8
+    timesteps: 1 # history
+    prioritisation: False
+    task_uniform: True # uniform sampling of tasks for multi-task buffers
+    use_disk: True
+    path: '/home/yechen/BimanualShift/data/replay_push_box' # only used when use_disk is True.
+    max_parallel_processes: 32
+    task_folder: "multi"
+
+framework:
+    log_freq: 100
+    save_freq: 10000
+    train_envs: 1
+    replay_ratio: ${replay.batch_size}
+    transitions_before_train: 200
+    tensorboard_logging: True
+    csv_logging: True
+    training_iterations: 100001
+    gpu: 0
+    env_gpu: 0
+    logdir: '/tmp/arm_test/'
+    logging_level: 20 # https://docs.python.org/3/library/logging.html#levels
+    seeds: 1
+    start_seed: 0
+    load_existing_weights: False
+    num_weights_to_keep: 60 # older checkpoints will be deleted chronologically
+    num_workers: 0
+    record_every_n: 5
+    checkpoint_name_prefix: "checkpoint"
+    use_wandb: false
+    wandb_project: "bimanualshift"
+    wandb_group: ${rlbench.task_name}_${method.name}
+    seed: 0
+    wandb_name: ${framework.seed}
+    use_skill: True
+    use_pretrained: True
+    pretrained_weights_dir: "/home/yechen/BimanualShift/bift/peract_600k/ckpts/multi/PERACT_BC/seed0/weights/600000"
+    use_prefix: False
+    frozen: False
+    augmentation_type: "standard"
+    use_visual_tracker: True
+    visual_tracker_backend: "grounded_sam"
+    visual_tracker_device: "cuda"
+    visual_tracker_box_threshold: 0.15
+    visual_tracker_text_threshold: 0.1
+    visual_tracker_prompt: "robot arm. robotic arm. gripper. panda arm."
+    grounded_sam_repo: "/home/yechen/BimanualShift/third_party/Grounded-Segment-Anything"
+    grounding_dino_config: "/home/yechen/BimanualShift/third_party/Grounded-Segment-Anything/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
+    grounding_dino_checkpoint: "/home/yechen/BimanualShift/third_party/Grounded-Segment-Anything/groundingdino_swint_ogc.pth"
+    sam_checkpoint: "/home/yechen/BimanualShift/third_party/Grounded-Segment-Anything/sam_vit_h_4b8939.pth"
+    sam_version: "vit_h"
+    bert_base_uncased_path: null
+    use_action_generator: True
+    action_generator_hidden_dim: 256
+    use_memory_bank: True
+    memory_bank_capacity: 256
+    memory_bank_sim_threshold: 0.65
+    memory_bank_blend_alpha: 0.8
+
+defaults:
+    - method: BIMANUALSHIFT_PERACT
+
+hydra:
+    run:
+        dir: ${framework.logdir}/${rlbench.task_name}/${method.name}
