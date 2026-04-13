@@ -7,7 +7,9 @@
 [![wandb](https://img.shields.io/badge/Wandb_0.14.0-yellow?logo=weightsandbiases&logoColor=white)](https://wandb.ai/site/)
 [![license](https://img.shields.io/badge/License-MIT-gree.svg?labelColor=gray)](https://github.com/ashleve/lightning-hydra-template#license)
 
-Yechen Fan, Xianyou Ji, Chenyang Song, Huixin He, Haibin Wu, Jinhua Ye <sup>†</sup>, Gengfeng Zheng <sup>†</sup>
+Yechen Fan<sup>1,2</sup>, Xianyou Ji<sup>1</sup>, Chenyang Song<sup>3</sup>, Huixin He<sup>4</sup>, Haibin Wu<sup>1</sup>, Jinhua Ye<sup>1,2†</sup>, Gengfeng Zheng<sup>2†</sup>
+
+<sup>1</sup> Fuzhou University &nbsp; <sup>2</sup> Fujian Key Laboratory of Special Intelligent Equipment Safety Measurement and Control &nbsp; <sup>3</sup> Beihang University &nbsp; <sup>4</sup> Huaqiao University
 
 **[[Project Page](https://yechen056.github.io/Bift/)] | [[Paper]()]**
 
