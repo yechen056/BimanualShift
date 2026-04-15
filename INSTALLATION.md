@@ -7,6 +7,8 @@ First, we create the rlbench environment and install the dependencies
 ```bash
 conda create -n rlbench python=3.8
 conda activate rlbench
+git clone https://github.com/yechen056/BimanualShift.git
+cd BimanualShift
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
 
