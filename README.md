@@ -11,8 +11,6 @@ Yechen Fan<sup>1,2*</sup>, Jinhua Ye<sup>1,2*</sup>, Xianyou Ji<sup>1</sup>, Che
 
 <sup>1</sup> Fuzhou University &nbsp; <sup>2</sup> Fujian Key Laboratory of Special Intelligent Equipment Safety Measurement and Control &nbsp; <sup>3</sup> Beihang University &nbsp; <sup>4</sup> South China University of Technology
 
-<sup>*</sup>Equal contribution &nbsp; <sup>†</sup>Corresponding authors
-
 </div>
 
 # 📖 Overview
