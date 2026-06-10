@@ -1,17 +1,17 @@
 <div align="center">
 
-# BimanualShift: Transferring Unimanual Policy for General Bimanual Manipulation
+# BimanualShift: Arm-Conditioned Residual Skill Transfer from Unimanual Policies to Bimanual Manipulation
 
 [![python](https://img.shields.io/badge/-Python_3.8_-blue?logo=python&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pytorch](https://img.shields.io/badge/PyTorch_2.0+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
 [![wandb](https://img.shields.io/badge/Wandb_0.14.0-yellow?logo=weightsandbiases&logoColor=white)](https://wandb.ai/site/)
 [![license](https://img.shields.io/badge/License-MIT-gree.svg?labelColor=gray)](https://github.com/ashleve/lightning-hydra-template#license)
 
-Yechen Fan<sup>1,2</sup>, Xianyou Ji<sup>1</sup>, Chenyang Song<sup>3</sup>, Huixin He<sup>4</sup>, Haibin Wu<sup>1</sup>, Jinhua Ye<sup>1,2†</sup>, Gengfeng Zheng<sup>2†</sup>
+Yechen Fan<sup>1,2*</sup>, Jinhua Ye<sup>1,2*</sup>, Xianyou Ji<sup>1</sup>, Chenyang Song<sup>3</sup>, Haibin Wu<sup>1</sup>, Gengfeng Zheng<sup>2†</sup>, Jiafu Wan<sup>4†</sup>
 
-<sup>1</sup> Fuzhou University &nbsp; <sup>2</sup> Fujian Key Laboratory of Special Intelligent Equipment Safety Measurement and Control &nbsp; <sup>3</sup> Beihang University &nbsp; <sup>4</sup> Huaqiao University
+<sup>1</sup> Fuzhou University &nbsp; <sup>2</sup> Fujian Key Laboratory of Special Intelligent Equipment Safety Measurement and Control &nbsp; <sup>3</sup> Beihang University &nbsp; <sup>4</sup> South China University of Technology
 
-**[[Project Page](https://yechen056.github.io/Bift/)] | [[Paper]()]**
+<sup>*</sup>Equal contribution &nbsp; <sup>†</sup>Corresponding authors
 
 </div>
 
@@ -20,7 +20,7 @@ Yechen Fan<sup>1,2</sup>, Xianyou Ji<sup>1</sup>, Chenyang Song<sup>3</sup>, Hui
   <img src="docs/framework.jpg" alt="Technical Framework of BimanualShift" width="95%">
 </p>
 
-**BimanualShift** is a modular transfer framework for general bimanual manipulation. Instead of learning dual-arm control from scratch, it reuses **fully frozen pretrained unimanual policies** and equips them with lightweight adaptation modules for perception, coordination, and memory.
+**BimanualShift** is an arm-conditioned residual skill transfer framework for adapting frozen pretrained unimanual policies to bimanual manipulation. Instead of learning a full bimanual policy from scratch, it aligns shared bimanual observations to arm-specific inputs and learns lightweight residual coordination for synchronization, spatial avoidance, and contact compensation under few bimanual demonstrations.
 
 # 💻 Installation
 
