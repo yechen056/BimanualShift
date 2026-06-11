@@ -22,7 +22,7 @@ Yechen Fan<sup>1,2*</sup>, Jinhua Ye<sup>1,2*</sup>, Xianyou Ji<sup>1</sup>, Che
 
 # 💻 Installation
 
-See [INSTALL.md](INSTALLATION.md) for installation instructions. 
+See [INSTALLATION.md](INSTALLATION.md) for installation instructions.
 
 # 🚀 Quick Start
 
