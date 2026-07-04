@@ -33,22 +33,22 @@ Please download the RLBench2 demonstrations from [Dataset](https://bimanual.gith
 ### 🧠 2. Training
 Before training, please download the pretrained single-arm PerAct model and place it under `BimanualShift/bift`:
 ```bash
-cd /home/yechen/BimanualShift/bift
+cd BimanualShift/bift
 wget https://github.com/peract/peract/releases/download/v1.0.0/peract_600k.zip
 unzip peract_600k.zip
 ```
 
 To train our BimanualShift policy, run:
 ```bash
-cd /home/yechen/BimanualShift
+cd BimanualShift
 conda activate rlbench
-python /home/yechen/BimanualShift/scripts/train.py \
+
+python scripts/train.py \
   method=BIMANUALSHIFT_PERACT \
   rlbench.tasks=[YOUR_TASK] \
   rlbench.task_name=YOUR_EXPERIMENT_NAME \
   framework.logdir=/home/yechen/BimanualShift/outputs \
   framework.training_iterations=30001 \
-  replay.batch_size=1 \
   framework.use_pretrained=True \
   framework.pretrained_weights_dir=/home/yechen/BimanualShift/bift/peract_600k/ckpts/multi/PERACT_BC/seed0/weights/600000
 ```
@@ -56,9 +56,10 @@ python /home/yechen/BimanualShift/scripts/train.py \
 ### 🤖 3. Evaluation
 To evaluate a checkpoint in simulation, you can use:
 ```bash
-cd /home/yechen/BimanualShift
+cd BimanualShift
 conda activate rlbench
-python /home/yechen/BimanualShift/scripts/eval.py \
+
+python scripts/eval.py \
   method=BIMANUALSHIFT_PERACT \
   framework.logdir=/home/yechen/BimanualShift/outputs \
   rlbench.task_name=YOUR_EXPERIMENT_NAME \
